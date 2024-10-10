@@ -1,0 +1,29 @@
+from typing import TypeVarTuple
+
+
+age = int(input("Enter your age: "))
+citizen = input("Are you a legal U.S citizen (y/n): ")
+registered = input("Are you registered to vote (y/n): ")
+Incarcerated = input("Are you incarcerated (y/n): ")
+
+if age >= 18:
+  eligible = True
+
+if citizen == "y":
+  eligible = True
+
+if registered == "y":
+  eligible = True
+
+if Incarcerated == "n":
+  eligible = True
+
+if citizen == "y" and registered == "y" and age >=18 and Incarcerated == "n":
+  print()
+  print("You are eligible to vote!")
+
+if citizen == "n" or registered == "n" or age <=17 or Incarcerated == "y":
+  print()
+  print("You are not eligible to vote.")
+
+
